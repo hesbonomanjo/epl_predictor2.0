@@ -1,0 +1,48 @@
+class FootballClubs {
+  //Note to update this listing should the teams in the premier league change.
+  Map<String, String> clubID = const {
+    'Manchester United': '33',
+    'Manchester City': '50',
+    'Leicester': '46',
+    'Liverpool': '40',
+    'Tottenham': '47',
+    'Everton': '45',
+    'Chelsea': '49',
+    'Southampton': '41',
+    'West Ham': '48',
+    'Arsenal': '42',
+    'Aston Villa': '66',
+    'Leeds': '63',
+    'Crystal Palace': '52',
+    'Wolves': '39',
+    'Newcastle': '34',
+    'Brighton': '51',
+    'Burnley': '44',
+    'Fulham': '36',
+    'West Brom': '60',
+    'Sheffield Utd': '62',
+  };
+
+  List<String> clubs = const [
+    'Manchester United',
+    'Manchester City',
+    'Leicester',
+    'Liverpool',
+    'Tottenham',
+    'Everton',
+    'Chelsea',
+    'Southampton',
+    'West Ham',
+    'Arsenal',
+    'Aston Villa',
+    'Leeds',
+    'Crystal Palace',
+    'Wolves',
+    'Newcastle',
+    'Brighton',
+    'Burnley',
+    'Fulham',
+    'West Brom',
+    'Sheffield Utd',
+  ];
+}

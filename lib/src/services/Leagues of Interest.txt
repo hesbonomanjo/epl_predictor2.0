@@ -1,0 +1,3 @@
+"id":276," = Kenya Premier League
+"id":2" = UEFA  Champions League
+"id":525" = UEFA  Champions League Women
