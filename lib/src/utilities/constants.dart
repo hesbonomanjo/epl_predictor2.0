@@ -8,9 +8,9 @@ abstract class Constants {
 
   // ---------------------------------------------------------------------------
   //yahoo
-  // static String apiKey = '6d7f835091mshc2cf3546ddf16afp179c19jsn95d12be2e2f3';
+  static String apiKey = '6d7f835091mshc2cf3546ddf16afp179c19jsn95d12be2e2f3';
   //gmail
-  static String apiKey = '5b940cdc55msh676b58f0bcdd3f1p17691bjsnc2a2275e4e02';
+  // static String apiKey = '5b940cdc55msh676b58f0bcdd3f1p17691bjsnc2a2275e4e02';
   // ---------------------------------------------------------------------------
 
   static String uri = 'https://api-football-v1.p.rapidapi.com/v2/leagueTable/2';

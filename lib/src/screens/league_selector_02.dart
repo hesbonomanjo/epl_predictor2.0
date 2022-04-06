@@ -1,6 +1,6 @@
 //CURRENT 1ST LANDING PAGE
 
-import 'package:epl_predictor/src/screens/league_standings_03_b.dart';
+// import 'package:epl_predictor/src/screens/league_standings_03_b.dart';
 import 'package:flutter/material.dart';
 import 'package:epl_predictor/src/utilities/const_leagues_of_interest.dart';
 import 'league_fixtures_03.dart';
@@ -9,7 +9,7 @@ import 'league_fixtures_03.dart';
 class LeagueSelectorScreen extends StatelessWidget {
   final String country;
 
-  LeagueSelectorScreen({required this.country});
+  const LeagueSelectorScreen({Key? key,required this.country}) :super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,20 +20,21 @@ class LeagueSelectorScreen extends StatelessWidget {
     // print(leaguesOfInterest);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Step 2 of 4'),
+        title: const Text('Step 2 of 4'),
       ),
       body: Column(
         children: [
-          Text(
+          const Text(
             'Select League of Interest...',
-            style: TextStyle(color: Colors.black, fontSize: 20),
+            // style: TextStyle(color: Colors.black, fontSize: 20),
+            style: TextStyle( fontSize:  20),
           ),
-          SizedBox(height: 10),
-          Container(
-            color: Colors.grey[200],
+          const SizedBox(height: 10),
+          SizedBox(
+            // color: Colors.grey[200],
             height: MediaQuery.of(context).size.height * .75,
             child: Scrollbar(
-              isAlwaysShown: true,
+              thumbVisibility: true,
               thickness: 20,
               child: ListView.builder(
                 itemCount: leaguesOfInterest.length,
@@ -46,9 +47,9 @@ class LeagueSelectorScreen extends StatelessWidget {
                   //String min = tempLeagueName[1].substring(14, 16).toString();
 
                   return ListTile(
-                    title: Text('${leagueData[1]}',
-                        style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold)),
+                    title: Text(leagueData[1],
+                        style: const TextStyle(
+                             fontWeight: FontWeight.bold)),
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {

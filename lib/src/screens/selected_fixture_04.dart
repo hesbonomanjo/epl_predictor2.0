@@ -9,9 +9,9 @@ import 'dart:io';
 class SelectedFixture extends StatefulWidget {
   final String selectedFixtureID, time;
 
-  SelectedFixture(
-      {/*required*/ required this.selectedFixtureID,
-      /*required*/ required this.time});
+  const SelectedFixture(
+      { Key? key, required this.selectedFixtureID,
+       required this.time}) : super(key: key);
 
   @override
   _SelectedFixtureState createState() => _SelectedFixtureState();
@@ -105,7 +105,7 @@ class _SelectedFixtureState extends State<SelectedFixture> {
     HttpClient httpClient = HttpClient();
 
     String url = Constants.uriFixturesPredictions(selectedFixture);
-    print(selectedFixture);
+    // print(selectedFixture);
 
     httpClient.getUrl(Uri.parse(url)).then((HttpClientRequest request) {
       request.headers.set('x-rapidapi-host', Constants.apiHostBeta);
@@ -272,32 +272,32 @@ class _SelectedFixtureState extends State<SelectedFixture> {
         ),
         //body: Text('Selected Fixture is: ${widget.selectedFixtureID}'),
         body: isLoading
-            ? Center(child: CircularProgressIndicator())
+            ? const Center(child: CircularProgressIndicator())
             : SingleChildScrollView(
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                     Text(
                       'Predicted to win: $winningTeam',
-                      style: TextStyle(fontSize: 20),
+                      style: const TextStyle(fontSize: 20),
                     ),
-                    Divider(height: 2, thickness: 3),
+                    const Divider(height: 2, thickness: 3),
                     Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('PREDICTED GOALS',
+                          const Text('PREDICTED GOALS',
                               style: TextStyle(fontWeight: FontWeight.bold)),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Container(child: Text('Home = $homeGoals')),
-                              Container(child: Text('Away = $awayGoals')),
+                              SizedBox(child: Text('Home = $homeGoals')),
+                              SizedBox(child: Text('Away = $awayGoals')),
                             ],
                           ),
-                          Divider(height: 2, thickness: 3),
+                          const Divider(height: 2, thickness: 3),
                           Text('ADVICE : $advice',
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                          Divider(height: 2, thickness: 3),
+                              style: const TextStyle(fontWeight: FontWeight.bold)),
+                          const Divider(height: 2, thickness: 3),
                         ]),
                     Text('OVERALL PREDICTION:',
                         style: TextStyle(

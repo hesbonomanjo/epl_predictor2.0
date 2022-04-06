@@ -92,6 +92,16 @@ class ListofLeagues {
     // LeaguesOfInterest(
     //     leagueId: '483', leagueName: 'Argentina Copa de Supaliga'),
     LeaguesOfInterest(
+        leagueId: '342',
+        leagueName: 'Armenia Premier League',
+        season: '2021',
+        country: 'Armenia'),
+    LeaguesOfInterest(
+        leagueId: '343',
+        leagueName: 'Armenia First League',
+        season: '2021',
+        country: 'Armenia'),
+    LeaguesOfInterest(
         leagueId: '219',
         leagueName: 'Austria Erste Liga',
         season: '2021',
@@ -311,6 +321,11 @@ class ListofLeagues {
         leagueName: 'German Amateur - Regionalliga SudWest',
         season: '2021',
         country: 'Germany'),
+    LeaguesOfInterest(
+        leagueId: '570',
+        leagueName: 'Ghana Premier League',
+        season: '2021',
+        country: 'Ghana'),
     LeaguesOfInterest(
         leagueId: '197',
         leagueName: 'Super League',

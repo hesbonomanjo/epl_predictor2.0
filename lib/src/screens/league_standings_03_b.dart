@@ -126,7 +126,7 @@ class _LeagueStandingsState extends State<LeagueStandings> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Container(
+                    SizedBox(
                       // color: Colors.red,
                       height: 40,
                       width: MediaQuery.of(context).size.width,
@@ -165,9 +165,9 @@ class _LeagueStandingsState extends State<LeagueStandings> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Container(
+                    SizedBox(
                       height: MediaQuery.of(context).size.height * .65,
-                      color: Colors.grey[200],
+                      // color: Colors.grey[200],
                       child: Scrollbar(
                         thickness: 20,
                         child: ListView.builder(

@@ -34,6 +34,7 @@ class _LeagueFixturesState extends State<LeagueFixtures> {
   void initState() {
     super.initState();
     getData();
+    // print(currentDate);
   }
 
   Future<void> _selectDate(BuildContext context) async {
@@ -43,11 +44,11 @@ class _LeagueFixturesState extends State<LeagueFixtures> {
         initialDate: currentDate,
         firstDate: DateTime(2015),
         lastDate: DateTime(2050));
-    if (pickedDate != null && pickedDate != currentDate)
+    if (pickedDate != null && pickedDate != currentDate){
       setState(() {
         currentDate = pickedDate;
         getData();
-      });
+      });}
   }
 
   Future getData() async {
@@ -123,12 +124,12 @@ class _LeagueFixturesState extends State<LeagueFixtures> {
                   children: <Widget>[
                     Text(
                       '${currentDate.toString().substring(0, 10)} Fixtures',
-                      style: const TextStyle(color: Colors.black, fontSize: 20),
+                      style: const TextStyle(fontSize: 20),
                     ),
                     const SizedBox(height: 10),
-                    Container(
+                    SizedBox(
                       height: MediaQuery.of(context).size.height * .65,
-                      color: Colors.grey[200],
+                      // color: Colors.grey[200],
                       child: fixturesList.isEmpty
                           ? const Text('No games today',
                               style: TextStyle(fontSize: 25))
@@ -190,24 +191,24 @@ class _LeagueFixturesState extends State<LeagueFixtures> {
                     ElevatedButton(
                       child: const Text(
                         'SELECT ANOTHER FIXTURE DATE',
-                        style: TextStyle(color: Colors.white),
+                        // style: TextStyle(color: Colors.white),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.black54, // background
-                        onPrimary: Colors.white, // foreground
-                      ),
+                          // primary: Colors.black54, // background
+                          // onPrimary: Colors.white, // foreground
+                          ),
                       onPressed: () => _selectDate(context),
                     ),
                     const SizedBox(height: 10),
                     ElevatedButton(
                       child: const Text(
                         'LEAGUE STANDINGS',
-                        style: TextStyle(color: Colors.white),
+                        // style: TextStyle(color: Colors.white),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.black54, // background
-                        onPrimary: Colors.white, // foreground
-                      ),
+                          // primary: Colors.black54, // background
+                          // onPrimary: Colors.white, // foreground
+                          ),
                       // onPressed: () {},
                       onPressed: () => Navigator.push(
                           context,
